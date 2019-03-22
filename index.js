@@ -24,7 +24,8 @@ export default function useCountdown(seconds) {
   
   function startCountdown() {
     setSecondsLeft(secs);
-    resumeCountdown();
+    countdown.current = setInterval(tick, 1000);
+    cleaner.current = setTimeout(stopCountdown, secs * 1000);
   }
 
   function stopCountdown() {

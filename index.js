@@ -48,6 +48,7 @@ export default function useCountdown(seconds) {
     secondsLeft,
     startCountdown,
     stopCountdown,
+    resumeCountdown,
     restartCountdown,
   };
 }
